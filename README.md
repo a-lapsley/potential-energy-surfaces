@@ -25,7 +25,7 @@ Program to find the minimum energy configuration in 3D space for a system of N i
 ## Available potential energy functions
 ### Lennard-Jones
 The Lennard-Jones potential is defined as
-
+![alt text]https://github.com/a-lapsley/potential-energy-surfaces/raw/main/img/lennard_jones.PNG "Lennard -Jones formula" 
 
 
 ## default_config.json
