@@ -427,7 +427,7 @@ def bond_lengths(coord_arr):
     for i in range(0, len(coord_arr)):
         for j in range(i+1, len(coord_arr)):
             vec = coord_arr[i] - coord_arr[j]
-            print("Particle %i - Particle %i distance: %.3f" % \
+            print("Particle %i - Particle %i distance: %.3f sigma" % \
                 ((i+1, j+1, vec.length()))
                 )
 
