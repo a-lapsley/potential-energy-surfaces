@@ -1,0 +1,52 @@
+{
+    "minimise":{
+        "syntax":"minimise <potential> [<strength>] [<max_steps>]",
+        "description":"Minimises energy of a system defined by an XYZ file using the specified potential model and the default parameters.",
+        "<potential>":"The model for potential energy between two points to use",
+        "\tAvailable potentials:":"",
+        "\tlennard_jones":"Lennard-Jones potential",
+        "\tmorse":"Morse potential",
+        "<strength>":"(optional) Value of r_e/sigma for the Morse potential. Defaults to 1",
+        "<max_steps>":"(optional) Maximum number of iterations before program should stop regardless of whether local minimum has been reached. Defaults to 0 (no maximum)"
+    },
+    "minimise_custom":{
+        "syntax":"minimise <potential> <delta> <lambda> <threshold> [<max_steps>] [<strength>]",
+        "description":"Minimises energy of a system defined by an XYZ file using the specified potential model and the specified parameters.",
+        "<potential>":"The model for potential energy between two points to use",
+        "\tAvailable potentials:":"",
+        "\tlennard_jones":"Lennard-Jones potential",
+        "\tmorse":"Morse potential",
+        "<delta>":"Value of delta to use when approximating local gradient of the potential energy",
+        "<lambda>":"Value of lambda used to determine step size in direction towards local minimum",
+        "<threshold>":"Value below which a gradient is considered to be 0 and so at a minimum",
+        "<strength>":"(optional) Value of r_e/sigma for the Morse potential. Defaults to 1",
+        "<max_steps>":"(optional) Maximum number of iterations before program should stop regardless of whether local minimum has been reached. Defaults to 0 (no maximum)"
+        
+    },
+    "bond_lengths":{
+        "syntax":"bond_lengths",
+        "description":"Prints out table of inter-particle distances for an XYZ file."
+    },
+    "energy":{
+        "syntax":"energy <potential> [<strength>]",
+        "description":"Gets the energy of a system from an XYZ file according to the specified potential.",
+        "<potential>":"The model for potential energy between two points to use",
+        "\tAvailable potentials:":"",
+        "\tlennard_jones":"Lennard-Jones potential",
+        "\tmorse":"Morse potential",
+        "<strength>":"(optional) Value of r_e/sigma for the Morse potential. Defaults to 1"
+    },
+    "plot":{
+        "syntax":"plot",
+        "description":"Generates a 3D representation of an XYZ file"  
+    },
+    "help":{
+        "syntax":"help [<command>]",
+        "description":"Displays a list of available commands. If <command> is specified, returns syntax information for specific command",
+        "<command>":"Command to return syntax information for"
+    },
+    "quit":{
+        "syntax":"quit",
+        "description":"Exits the program"
+    }
+}
