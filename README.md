@@ -24,9 +24,15 @@ Program to find the minimum energy configuration in 3D space for a system of N i
 
 ## Available potential energy functions
 ### Lennard-Jones
-The Lennard-Jones potential is defined as
-![alt text](https://github.com/a-lapsley/potential-energy-surfaces/raw/main/img/lennard_jones.PNG "Lennard -Jones formula") 
+The Lennard-Jones potential between 2 particles a distance r apart is defined as
+![alt text](https://github.com/a-lapsley/potential-energy-surfaces/raw/main/img/lennard_jones.PNG "Lennard -Jones formula")
+The energies are expressed in terms of the parameter ε (epsilon) and lengths in terms of the parameter σ (sigma).
 
+### Morse
+The Morse potential between 2 particles a distance r apart is defined as
+![alt text](https://github.com/a-lapsley/potential-energy-surfaces/raw/main/img/morse.PNG "Morse formula")
+The energies are expressed in terms of the parameter D_e and lengths in terms of σ (sigma). 
+The parameter r_e/σ specifies the strength of the potential and its value can be changed in the program. 
 
 ## default_config.json
 This file specifies the default parameters to use when minimising the energy of a system with the `minimise` command. Parameters for each potential energy function can be specified separately. 
@@ -34,4 +40,9 @@ This file specifies the default parameters to use when minimising the energy of 
 * `lambda`  Value of lambda used to determine step size in direction towards local minimum
 * `threshold`   Value below which a gradient is considered to be 0 and so at a minimum
 
+## Included .xyz files
+Some .xyz files are included as inputs and examples of outputs.
 
+Files beginning `input_(N)` contain N arbritrarily placed points as starting points for minimisation. For N > 3, these points all lie on the same plane if the suffix of the file is `_flat` and otherwise do not all lie on the same plane. The planar and non-planar input files may lead to different outputs when minimised as the planar points essentially remain constrained to the plane they start in so the program will generate the minimum energy conformation within that plane, whereas the non-planar input file may lead to a 3-dimensional structure. 
+
+Files beginning with `ex_` are example output files that have already been generated using the provided input files. The suffix gives the potential function used to generated the example file, with `lennard` corresponding to Lennard-Jones, `morse1` a Morse potential with r_e/sigma = 1 and `morse2` a Morse potential with r_e/sigma = 2. 
