@@ -10,7 +10,7 @@
         "<max_steps>":"(optional) Maximum number of iterations before program should stop regardless of whether local minimum has been reached. Defaults to 0 (no maximum)"
     },
     "minimise_custom":{
-        "syntax":"minimise <potential> <delta> <lambda> <threshold> [<max_steps>] [<strength>]",
+        "syntax":"minimise_custom <potential> <delta> <lambda> <threshold> [<strength>] [<max_steps>]",
         "description":"Minimises energy of a system defined by an XYZ file using the specified potential model and the specified parameters.",
         "<potential>":"The model for potential energy between two points to use",
         "\tAvailable potentials:":"",
@@ -43,7 +43,7 @@
     "help":{
         "syntax":"help [<command>]",
         "description":"Displays a list of available commands. If <command> is specified, returns syntax information for specific command",
-        "<command>":"Command to return syntax information for"
+        "<command>":"(optional) Command to return syntax information for"
     },
     "quit":{
         "syntax":"quit",
