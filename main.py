@@ -5,20 +5,22 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import TABLEAU_COLORS
 from random import choice as rand_choice
 import json
+import os
 
 #File handling
 
 def specify_input_file(name=""):
     #Handles user specifying input XYZ file
     if name != "":
-        return "xyz_files\\%s.xyz" % name
+        return os.path.join("xyz_files", "%s.xyz" % name)
     
     valid_file = False
     while not valid_file:
         try:
             print("Please enter name of input file: ")
             name = input().strip().replace(".xyz","")
-            dir = "xyz_files\\%s.xyz" % name
+            #dir = "xyz_files\\%s.xyz" % name
+            dir = os.path.join("xyz_files", "%s.xyz" % name)
             f = open(dir)
             f.close()
             valid_file = True
@@ -32,14 +34,14 @@ def specify_output_file(name=""):
     #Handles user specifying data output file
 
     if name != "":
-        return "xyz_files\\%s.xyz" % name
+        return os.path.join("xyz_files", "%s.xyz" % name)
 
     valid_file = False
     while not valid_file:
         try:
             print("Please enter name of output file: ")
             name = input().strip().replace(".xyz","")
-            dir = "xyz_files\\%s.xyz" % name
+            dir = os.path.join("xyz_files", "%s.xyz" % name)
             f = open(dir, "x")
             f.close()
             valid_file = True
